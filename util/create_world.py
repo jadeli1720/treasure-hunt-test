@@ -113,12 +113,12 @@ t.save()
 
 # End of section 5 to paste
 
-# from django.contrib.auth.models import User
-# from adventure.models import Player, Room, Item
-# import random
+from django.contrib.auth.models import User
+from adventure.models import Player, Room, Item
+import random
 
-# t=Item.objects.first()
-# t.levelUpAndRespawn()
+t=Item.objects.first()
+t.levelUpAndRespawn()
 
 
 

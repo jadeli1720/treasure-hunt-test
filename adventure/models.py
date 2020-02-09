@@ -136,15 +136,15 @@ class Player(models.Model):
         else:
             return False
         return True
-    # def removeItem(self, item):
-    #     if item.player.id != self.id:
-    #         return False
-    #     if item.itemtype == "BODYWEAR":
-    #         self.bodywear = item
-    #     elif item.itemtype != "FOOTWEAR":
-    #         self.footwear = item
-    #     else:
-    #         return False
+    def removeItem(self, item):
+        if item.player.id != self.id:
+            return False
+        if item.itemtype == "BODYWEAR":
+            self.bodywear = item
+        elif item.itemtype != "FOOTWEAR":
+            self.footwear = item
+        else:
+            return False
     def save(self, *args, **kwargs):
         items = Item.objects.filter(player=self)
         weight = 0
